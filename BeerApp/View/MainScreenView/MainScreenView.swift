@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainScreenView: View {
     @ObservedObject var viewModel: MainScreenViewModel
+    @State var showingDetails = false
     internal let columns = [
         GridItem(.adaptive(minimum: 80))
     ]

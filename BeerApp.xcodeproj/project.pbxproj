@@ -118,6 +118,14 @@
 			path = MainScreenView;
 			sourceTree = "<group>";
 		};
+		504941E5287C638600D87BDC /* DetailsScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				50BDBD34287C4ABD0062F6D8 /* DetailsScreenView.swift */,
+			);
+			path = DetailsScreenView;
+			sourceTree = "<group>";
+		};
 		50BDBCEF287C43D40062F6D8 = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				504941DF287C5F9D00D87BDC /* MainScreenView */,
-				50BDBD34287C4ABD0062F6D8 /* DetailsScreenView.swift */,
+				504941E5287C638600D87BDC /* DetailsScreenView */,
 				504941DE287C5DAA00D87BDC /* Cells */,
 			);
 			path = View;

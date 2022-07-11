@@ -9,4 +9,9 @@ import Foundation
 
 class DetailsScreenViewModel: ObservableObject {
     
+    @Published var recipe: Recipe
+    
+    init(recipe: Recipe) {
+        self.recipe = recipe
+    }
 }
