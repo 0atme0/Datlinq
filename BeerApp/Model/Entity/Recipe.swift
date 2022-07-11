@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct Recipe {
-    
+struct Recipe: Codable {
+    let title: String
+    let image: String
+    let missedIngredients: [Ingredient]
+    let usedIngredients: [Ingredient]
 }

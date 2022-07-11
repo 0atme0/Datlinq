@@ -16,6 +16,6 @@ struct MainScreenView: View {
 
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenView(viewModel: MainScreenViewModel())
+        MainScreenView(viewModel: MainScreenViewModel(recipeManager: RecipeManager()))
     }
 }

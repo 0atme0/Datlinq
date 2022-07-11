@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		504941D8287C59AA00D87BDC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941D7287C59AA00D87BDC /* NetworkError.swift */; };
+		504941DB287C5AD900D87BDC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941DA287C5AD900D87BDC /* Ingredient.swift */; };
 		50BDBCFC287C43D40062F6D8 /* BeerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */; };
-		50BDBCFE287C43D40062F6D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDBCFD287C43D40062F6D8 /* ContentView.swift */; };
 		50BDBD00287C43D50062F6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDBCFF287C43D50062F6D8 /* Assets.xcassets */; };
 		50BDBD03287C43D50062F6D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDBD02287C43D50062F6D8 /* Preview Assets.xcassets */; };
 		50BDBD0D287C43D50062F6D8 /* BeerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDBD0C287C43D50062F6D8 /* BeerAppTests.swift */; };
@@ -40,9 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		504941D7287C59AA00D87BDC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		504941DA287C5AD900D87BDC /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		50BDBCF8287C43D40062F6D8 /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppApp.swift; sourceTree = "<group>"; };
-		50BDBCFD287C43D40062F6D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50BDBCFF287C43D50062F6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50BDBD02287C43D50062F6D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50BDBD08287C43D50062F6D8 /* BeerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,7 @@
 		50BDBD32287C4A8C0062F6D8 /* DetailsScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenViewModel.swift; sourceTree = "<group>"; };
 		50BDBD34287C4ABD0062F6D8 /* DetailsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenView.swift; sourceTree = "<group>"; };
 		50BDBD36287C4D7A0062F6D8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		50BDBD39287C50190062F6D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		504941D9287C59AD00D87BDC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				504941D7287C59AA00D87BDC /* NetworkError.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		50BDBCEF287C43D40062F6D8 = {
 			isa = PBXGroup;
 			children = (
@@ -106,12 +117,14 @@
 		50BDBCFA287C43D40062F6D8 /* BeerApp */ = {
 			isa = PBXGroup;
 			children = (
+				504941D9287C59AD00D87BDC /* Helper */,
+				50BDBD39287C50190062F6D8 /* Info.plist */,
 				50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */,
-				50BDBD2F287C46090062F6D8 /* ViewModel */,
+				50BDBD27287C44D50062F6D8 /* Model */,
 				50BDBD29287C44F00062F6D8 /* View */,
+				50BDBD2F287C46090062F6D8 /* ViewModel */,
 				50BDBCFF287C43D50062F6D8 /* Assets.xcassets */,
 				50BDBD01287C43D50062F6D8 /* Preview Content */,
-				50BDBD27287C44D50062F6D8 /* Model */,
 			);
 			path = BeerApp;
 			sourceTree = "<group>";
@@ -161,7 +174,6 @@
 		50BDBD29287C44F00062F6D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				50BDBCFD287C43D40062F6D8 /* ContentView.swift */,
 				50BDBD2A287C45140062F6D8 /* MainScreenView.swift */,
 				50BDBD34287C4ABD0062F6D8 /* DetailsScreenView.swift */,
 			);
@@ -181,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				50BDBD36287C4D7A0062F6D8 /* Recipe.swift */,
+				504941DA287C5AD900D87BDC /* Ingredient.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -315,12 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504941D8287C59AA00D87BDC /* NetworkError.swift in Sources */,
 				50BDBD26287C44D10062F6D8 /* RecipeManager.swift in Sources */,
 				50BDBD2D287C45240062F6D8 /* MainScreenViewModel.swift in Sources */,
 				50BDBD33287C4A8C0062F6D8 /* DetailsScreenViewModel.swift in Sources */,
-				50BDBCFE287C43D40062F6D8 /* ContentView.swift in Sources */,
 				50BDBCFC287C43D40062F6D8 /* BeerAppApp.swift in Sources */,
 				50BDBD2B287C45140062F6D8 /* MainScreenView.swift in Sources */,
+				504941DB287C5AD900D87BDC /* Ingredient.swift in Sources */,
 				50BDBD35287C4ABD0062F6D8 /* DetailsScreenView.swift in Sources */,
 				50BDBD37287C4D7A0062F6D8 /* Recipe.swift in Sources */,
 			);
@@ -484,6 +498,7 @@
 				DEVELOPMENT_TEAM = W7R6ZCLV57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -513,6 +528,7 @@
 				DEVELOPMENT_TEAM = W7R6ZCLV57;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
