@@ -23,6 +23,6 @@ struct MainScreenView: View {
 
 struct MainScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreenView(viewModel: MainScreenViewModel(recipeManager: RecipeManager()))
+        MainScreenView(viewModel: MainScreenViewModel(recipeManager: RecipeManager(resultsNumber: Constant.resultsNumber, mainIngredient: Constant.mainIngredient, networkManager: NetworkManager())))
     }
 }

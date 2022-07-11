@@ -15,45 +15,43 @@ protocol RecipeManagerProtocol {
 }
 
 class RecipeManager: RecipeManagerProtocol {
-    private let urlString = "https://api.spoonacular.com/recipes/findByIngredients"
-    private let apiKey = "81698cfee0a340c5960b6c24b1f0ca8e"
-    private let resultsNumber = 20
-    private let mainIngredient = "beer"
+    
+    var resultsNumber: Int
+    var mainIngredient: String
     private let session = URLSession.shared
     private lazy var jsonDecoder = JSONDecoder()
-
+    private let networkManager: NetworkManager
+    
+    init(resultsNumber: Int, mainIngredient: String, networkManager: NetworkManager) {
+        self.resultsNumber = resultsNumber
+        self.mainIngredient = mainIngredient
+        self.networkManager = networkManager
+    }
     public func getListOfRecipes(completion: @escaping RecipesResultClosure) {
         
-        var urlComponents = URLComponents(string: urlString)!
+        var urlComponents = URLComponents(string: Constant.urlString)!
         urlComponents.queryItems = [
-          URLQueryItem(name: "apiKey", value: apiKey),
-          URLQueryItem(name: "ingredients", value: mainIngredient),
-          URLQueryItem(name: "number", value: "\(resultsNumber)")
+            URLQueryItem(name: "apiKey", value: Constant.apiKey),
+            URLQueryItem(name: "ingredients", value: mainIngredient),
+            URLQueryItem(name: "number", value: "\(resultsNumber)")
         ]
-
+        
         var request = URLRequest(url: urlComponents.url!)
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-               guard error == nil else {
-                   completion(.failure(error!))
-                   return
-               }
-                    
-               guard let data = data else {
-                   completion(.failure(NetworkError.emptyData))
-                   return
-               }
-                    
-              do {
-                  let list = try self.jsonDecoder.decode([Recipe].self, from: data)
-                  completion(.success(list))
-              } catch let error {
-                  completion(.failure(error))
-              }
-           })
-
-           task.resume()
+        
+        networkManager.resumeDataTask(withRequest: request) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let list = try self.jsonDecoder.decode([Recipe].self, from: data)
+                    completion(.success(list))
+                } catch let error {
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
     }
 }
