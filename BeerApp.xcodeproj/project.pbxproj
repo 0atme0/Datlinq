@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		504941D8287C59AA00D87BDC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941D7287C59AA00D87BDC /* NetworkError.swift */; };
 		504941DB287C5AD900D87BDC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941DA287C5AD900D87BDC /* Ingredient.swift */; };
+		504941DD287C5D4600D87BDC /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941DC287C5D4600D87BDC /* RecipeCellView.swift */; };
+		504941E1287C5FAA00D87BDC /* MainScreenView+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941E0287C5FAA00D87BDC /* MainScreenView+Title.swift */; };
+		504941E3287C5FCE00D87BDC /* MainScreenView+Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941E2287C5FCE00D87BDC /* MainScreenView+Grid.swift */; };
 		50BDBCFC287C43D40062F6D8 /* BeerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */; };
 		50BDBD00287C43D50062F6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDBCFF287C43D50062F6D8 /* Assets.xcassets */; };
 		50BDBD03287C43D50062F6D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDBD02287C43D50062F6D8 /* Preview Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		504941D7287C59AA00D87BDC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		504941DA287C5AD900D87BDC /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		504941DC287C5D4600D87BDC /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
+		504941E0287C5FAA00D87BDC /* MainScreenView+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView+Title.swift"; sourceTree = "<group>"; };
+		504941E2287C5FCE00D87BDC /* MainScreenView+Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView+Grid.swift"; sourceTree = "<group>"; };
 		50BDBCF8287C43D40062F6D8 /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppApp.swift; sourceTree = "<group>"; };
 		50BDBCFF287C43D50062F6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,24 @@
 				504941D7287C59AA00D87BDC /* NetworkError.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		504941DE287C5DAA00D87BDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				504941DC287C5D4600D87BDC /* RecipeCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		504941DF287C5F9D00D87BDC /* MainScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				50BDBD2A287C45140062F6D8 /* MainScreenView.swift */,
+				504941E0287C5FAA00D87BDC /* MainScreenView+Title.swift */,
+				504941E2287C5FCE00D87BDC /* MainScreenView+Grid.swift */,
+			);
+			path = MainScreenView;
 			sourceTree = "<group>";
 		};
 		50BDBCEF287C43D40062F6D8 = {
@@ -174,8 +198,9 @@
 		50BDBD29287C44F00062F6D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				50BDBD2A287C45140062F6D8 /* MainScreenView.swift */,
+				504941DF287C5F9D00D87BDC /* MainScreenView */,
 				50BDBD34287C4ABD0062F6D8 /* DetailsScreenView.swift */,
+				504941DE287C5DAA00D87BDC /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,7 +358,10 @@
 				50BDBD2D287C45240062F6D8 /* MainScreenViewModel.swift in Sources */,
 				50BDBD33287C4A8C0062F6D8 /* DetailsScreenViewModel.swift in Sources */,
 				50BDBCFC287C43D40062F6D8 /* BeerAppApp.swift in Sources */,
+				504941E3287C5FCE00D87BDC /* MainScreenView+Grid.swift in Sources */,
+				504941E1287C5FAA00D87BDC /* MainScreenView+Title.swift in Sources */,
 				50BDBD2B287C45140062F6D8 /* MainScreenView.swift in Sources */,
+				504941DD287C5D4600D87BDC /* RecipeCellView.swift in Sources */,
 				504941DB287C5AD900D87BDC /* Ingredient.swift in Sources */,
 				50BDBD35287C4ABD0062F6D8 /* DetailsScreenView.swift in Sources */,
 				50BDBD37287C4D7A0062F6D8 /* Recipe.swift in Sources */,

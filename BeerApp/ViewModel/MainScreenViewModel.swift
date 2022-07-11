@@ -12,7 +12,7 @@ class MainScreenViewModel: ObservableObject {
     @Published var recipesList: [Recipe] = []
     @Published var isLoading = false
     @Published var isError: String?
-
+    
     init(recipeManager: RecipeManagerProtocol) {
         self.recipeManager = recipeManager
         getRecipesList()
@@ -21,14 +21,16 @@ class MainScreenViewModel: ObservableObject {
     private func getRecipesList() {
         self.isLoading = true
         self.recipeManager.getListOfRecipes() { result in
-            self.isLoading = false
-            switch result {
-            case .success(let list):
-                self.recipesList = list
-            case .failure(let error):
-                self.isError = error.localizedDescription
+            DispatchQueue.main.async {
+                self.isLoading = false
+                switch result {
+                case .success(let list):
+                    self.recipesList = list
+                case .failure(let error):
+                    self.isError = error.localizedDescription
+                }
             }
         }
     }
-
+    
 }
