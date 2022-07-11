@@ -12,6 +12,8 @@
 		504941DD287C5D4600D87BDC /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941DC287C5D4600D87BDC /* RecipeCellView.swift */; };
 		504941E1287C5FAA00D87BDC /* MainScreenView+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941E0287C5FAA00D87BDC /* MainScreenView+Title.swift */; };
 		504941E3287C5FCE00D87BDC /* MainScreenView+Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941E2287C5FCE00D87BDC /* MainScreenView+Grid.swift */; };
+		504941E7287C67BA00D87BDC /* DetailsScreenView+Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941E6287C67BA00D87BDC /* DetailsScreenView+Header.swift */; };
+		504941E9287C67C500D87BDC /* DetailsScreenView+List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504941E8287C67C500D87BDC /* DetailsScreenView+List.swift */; };
 		50BDBCFC287C43D40062F6D8 /* BeerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */; };
 		50BDBD00287C43D50062F6D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDBCFF287C43D50062F6D8 /* Assets.xcassets */; };
 		50BDBD03287C43D50062F6D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDBD02287C43D50062F6D8 /* Preview Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		504941DC287C5D4600D87BDC /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		504941E0287C5FAA00D87BDC /* MainScreenView+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView+Title.swift"; sourceTree = "<group>"; };
 		504941E2287C5FCE00D87BDC /* MainScreenView+Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainScreenView+Grid.swift"; sourceTree = "<group>"; };
+		504941E6287C67BA00D87BDC /* DetailsScreenView+Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsScreenView+Header.swift"; sourceTree = "<group>"; };
+		504941E8287C67C500D87BDC /* DetailsScreenView+List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsScreenView+List.swift"; sourceTree = "<group>"; };
 		50BDBCF8287C43D40062F6D8 /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50BDBCFB287C43D40062F6D8 /* BeerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerAppApp.swift; sourceTree = "<group>"; };
 		50BDBCFF287C43D50062F6D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				50BDBD34287C4ABD0062F6D8 /* DetailsScreenView.swift */,
+				504941E6287C67BA00D87BDC /* DetailsScreenView+Header.swift */,
+				504941E8287C67C500D87BDC /* DetailsScreenView+List.swift */,
 			);
 			path = DetailsScreenView;
 			sourceTree = "<group>";
@@ -371,8 +377,10 @@
 				50BDBD2B287C45140062F6D8 /* MainScreenView.swift in Sources */,
 				504941DD287C5D4600D87BDC /* RecipeCellView.swift in Sources */,
 				504941DB287C5AD900D87BDC /* Ingredient.swift in Sources */,
+				504941E7287C67BA00D87BDC /* DetailsScreenView+Header.swift in Sources */,
 				50BDBD35287C4ABD0062F6D8 /* DetailsScreenView.swift in Sources */,
 				50BDBD37287C4D7A0062F6D8 /* Recipe.swift in Sources */,
+				504941E9287C67C500D87BDC /* DetailsScreenView+List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
