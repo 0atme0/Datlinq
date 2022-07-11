@@ -11,8 +11,9 @@ import SwiftUI
 extension DetailsScreenView {
     var header: some View {
         VStack {
-            AsyncImage(
+            CachedAsyncImage(
                 url: URL(string: viewModel.recipe.image),
+                urlCache: .imageCache,
                 content: { image in
                     image.resizable()
                         .aspectRatio(contentMode: .fit)

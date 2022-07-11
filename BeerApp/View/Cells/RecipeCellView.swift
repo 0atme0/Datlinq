@@ -11,8 +11,9 @@ struct RecipeCellView: View {
     var recipe: Recipe
     var body: some View {
         VStack {
-            AsyncImage(
+            CachedAsyncImage(
                 url: URL(string: recipe.image),
+                urlCache: .imageCache,
                 content: { image in
                     image.resizable()
                         .aspectRatio(contentMode: .fit)
